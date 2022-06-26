@@ -112,6 +112,7 @@ import sabnzbd.articlecache
 import sabnzbd.bpsmeter
 import sabnzbd.scheduler as scheduler
 import sabnzbd.notifier as notifier
+import sabnzbd.sorting as sorting
 from sabnzbd.decorators import synchronized
 from sabnzbd.constants import (
     DEFAULT_PRIORITY,
@@ -320,7 +321,6 @@ def initialize(pause_downloader=False, clean_up=False, repair=0):
     # Values we want to remove
     deprecated_options = [
         cfg.ampm,
-        cfg.enable_meta,
         cfg.replace_illegal,
         cfg.html_login,
         cfg.allow_incomplete_nzb,
